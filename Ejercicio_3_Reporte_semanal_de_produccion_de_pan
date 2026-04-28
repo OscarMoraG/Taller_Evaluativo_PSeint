@@ -1,0 +1,51 @@
+Algoritmo Ejercicio_3_Reporte_semanal_de_produccion_de_pan
+	
+	Definir panes, total, max, diaMayor, ContaBajos, i Como Entero
+	Definir  promedio como real
+	
+	total<-0
+	max<-0
+	ContaBajos<-0
+	
+	Para i <- 1 Hasta 7 Hacer
+		
+        Escribir "Ingrese la cantidad de panes del dia ", i
+        Leer panes
+		
+        Mientras panes < 0 Hacer
+            Escribir "Error, no puede ser negativo. Ingrese nuevamente:"
+            Leer panes
+        FinMientras
+		
+		Si panes < 120 Entonces
+            Escribir "Produccion baja"
+        Sino
+            Si panes <= 180 Entonces
+                Escribir "Produccion adecuada"
+            Sino
+                Escribir "Produccion sobresaliente"
+            FinSi
+        FinSi
+		
+		total <- total + panes
+		
+		Si panes > max Entonces
+            max <- panes
+            diaMayor <- i
+        FinSi
+		
+		Si panes < 150 Entonces
+            contaBajos <- contaBajos + 1
+        FinSi
+		
+    FinPara
+
+	promedio <- total / 7
+	
+    Escribir "Total de la semana: ", total
+    Escribir "Promedio diario: ", promedio
+    Escribir "Dia con mayor produccion: ", diaMayor
+    Escribir "Dias con produccion menor a 150: ", contaBajos
+	
+	
+FinAlgoritmo

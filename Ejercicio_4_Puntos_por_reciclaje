@@ -1,0 +1,54 @@
+Funcion resultado <- CalcularPuntos(kilos)
+	
+    Definir resultado Como Entero
+	
+    resultado <- kilos * 5
+	
+FinFuncion
+
+
+Algoritmo Ejercicio_4_Puntos_por_reciclaje
+	
+		
+		Definir n, i, kilos, puntos Como Entero
+		Definir nombre Como Cadena
+		
+		
+		Escribir "Ingrese la cantidad de estudiantes:"
+		Leer n
+		
+		Mientras n <= 0 Hacer
+			Escribir "Error, debe ser mayor que 0. Ingrese nuevamente:"
+			Leer n
+		FinMientras
+		
+		Para i <- 1 Hasta n Hacer
+			
+			Escribir "Estudiante ", i
+			
+			Escribir "Ingrese el nombre:"
+			Leer nombre
+			
+			Escribir "Ingrese los kilos reciclados (0 a 30):"
+			Leer kilos
+			
+			Mientras kilos < 0 O kilos > 30 Hacer
+				Escribir "Error, debe estar entre 0 y 30:"
+				Leer kilos
+			FinMientras
+			
+			
+			puntos <- CalcularPuntos(kilos)
+			
+			Escribir "Nombre: ", nombre
+			Escribir "Puntos obtenidos: ", puntos
+			
+			Si puntos >= 50 Entonces
+				Escribir "Reconocimiento ganado"
+			Sino
+				Escribir "Debe reciclar mas"
+			FinSi
+			
+		FinPara
+		
+FinAlgoritmo

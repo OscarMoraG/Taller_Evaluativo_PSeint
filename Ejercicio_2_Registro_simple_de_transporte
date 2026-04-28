@@ -1,0 +1,39 @@
+Algoritmo Ejercicio_2_Registro_simple_de_transporte
+	
+	Definir codigo, total, contaViajes Como Entero
+	
+	total<-0
+	contaViajes<-0
+	
+	
+	Repetir
+		
+		Escribir "Ingrese un codigo (1=Bus, 2=Metro, 3=Taxi, 0=Salir): "
+		Leer codigo
+		
+		Si codigo = 1 Entonces
+			total<- total + 3000
+			contaViajes<- contaViajes + 1
+		SiNo
+			Si codigo = 2 Entonces
+				total<- total + 3500
+				contaViajes<- contaViajes + 1
+			SiNo
+				Si codigo = 3 Entonces
+					total <- total + 8000
+					contaViajes<- contaViajes + 1
+				SiNo
+					Si codigo <> 0 Entonces
+						Escribir "Codigo Invalido."
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+		
+		
+	Hasta Que codigo = 0
+	
+	Escribir "Total gastado: ", total
+	Escribir "Cantidad de viajes: ", contaViajes
+	
+FinAlgoritmo

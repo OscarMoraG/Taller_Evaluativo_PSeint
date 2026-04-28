@@ -1,0 +1,73 @@
+
+Algoritmo Ejercicio_1_Registro_de_minutos_de_celular
+	
+	Definir dia1, dia2, dia3, dia4, total, contadorAlto como entero
+	Definir  promero Como Real
+	
+	contadorAlto<-0
+	
+	Escribir "Ingrese los minutos utilizados el dia 1 (0 a 240)"
+	leer dia1
+	Mientras dia1 <=0 o dia1 >=240  Hacer
+		Escribir "Error, ingrese un valor entre 0 y 240"
+		leer dia1
+	Fin Mientras
+	
+	Si dia1<=120 Entonces
+		Escribir "Su consumo en el dia 1 fue NORMAL."
+	SiNo
+		Escribir "Su consumo en el dia 1 fue ALTO."
+		contadorAlto<-contadorAlto+1
+	Fin Si
+	
+	Escribir "Ingrese los minutos utilizados el dia 2 (0 a 240)"
+	leer dia2
+	Mientras dia2 <=0 o dia2 >=240  Hacer
+		Escribir "Error, ingrese un valor entre 0 y 240"
+		leer dia2
+	Fin Mientras
+	
+	Si dia2<=120 Entonces
+		Escribir "Su consumo en el dia 2 fue NORMAL."
+	SiNo
+		Escribir "Su consumo en el dia 2 fue ALTO."
+		contadorAlto<-contadorAlto+1
+	Fin Si
+	
+	Escribir "Ingrese los minutos utilizados el dia 3 (0 a 240)"
+	leer dia3
+	Mientras dia3 <=0 o dia3 >=240  Hacer
+		Escribir "Error, ingrese un valor entre 0 y 240"
+		leer dia3
+	Fin Mientras
+	
+	Si dia3<=120 Entonces
+		Escribir "Su consumo en el dia 3 fue NORMAL."
+	SiNo
+		Escribir "Su consumo en el dia 3 fue ALTO."
+		contadorAlto<-contadorAlto+1
+	Fin Si
+	
+	Escribir "Ingrese los minutos utilizados el dia 4 (0 a 240)"
+	leer dia4
+	Mientras dia4 <=0 o dia4 >=240  Hacer
+		Escribir "Error, ingrese un valor entre 0 y 240"
+		leer dia4
+	Fin Mientras
+	
+	Si dia4<=120 Entonces
+		Escribir "Su consumo en el dia 4 fue NORMAL."
+	SiNo
+		Escribir "Su consumo en el dia 4 fue ALTO."
+		contadorAlto<-contadorAlto+1
+	Fin Si
+	
+	total<- dia1+dia2+dia3+dia4
+	promero<- total/4
+	
+	Escribir "El total de minutos en los 4 dias de medicion son: ", total
+	Escribir "EL promedio de uso de minutos en los 4 dias son: ", promero
+	
+	
+	
+FinAlgoritmo
